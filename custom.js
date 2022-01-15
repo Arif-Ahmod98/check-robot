@@ -1,12 +1,27 @@
 "strict";
 
-let images = document.querySelector("img");
+let divBg = document.getElementsByClassName("my-div")[0];
 
-function bike() {
-    images.src = "images/Bullet-350-Bike-cb-background-819x1024.jpg";
+divBg.style.background = "red";
+divBg.style.color = "white";
+divBg.style.padding = "20px 30px";
 
-}
-function car() {
-    images.src = "images/CB-BACKGROUND-13-716x1024.jpg";
-   
-}
+
+let heading1 = document.createElement("h1");
+
+let text = document.createTextNode("This is the highest persont in the world!");
+
+heading1.appendChild(text);
+
+divBg.appendChild(heading1);
+
+let heading_2nd = document.getElementsByTagName("h1")[1];
+
+
+
+
+let addElement = document.createElement("h1");
+let text2 = document.createTextNode("This is the most important part in my life");
+
+addElement.appendChild(text2);
+divBg.appendChild(addElement);
