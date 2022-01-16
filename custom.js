@@ -1,25 +1,34 @@
 "strict";
 
-let photos = ["images/bike.jpg", "images/car.jpg", "images/laptop.jpeg"];
-let imgTag = document.querySelector("img");
+let images = ["images/bike.jpg", "images/car.jpg", "images/laptop.jpeg", "images/vactor.png", "images/jeep.jpg", "images/flower.jfif", "images/sunset.jfif", "images/cow.jfif"];
+
+let imgSource = document.querySelector("img");
+
 let count = 0;
 
-let background1 = document.querySelector("body");
-
 function next() {
+    count++;
+    if (count >= images.length) {
+        count = 0;
+        imgSource.src = images[count];
 
-   background1.style.background = "black";
-   background1.style.color = "white";
-   alert("you have clicked on black button");
+    } else {
+        imgSource.src = images[count];
+    }
 
-   }
+
+
+}
 
 function prev() {
+    count--;
+    if (count < 0) {
+        count = images.length - 1;
+        imgSource.src = images[count];
 
-    background1.style.background = "red";
-   background1.style.color = "white";
+    } else {
+        imgSource.src = images[count];
+    }
 
-   alert("You have clicked on white button");
-  
     
 }
