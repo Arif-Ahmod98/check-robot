@@ -1,27 +1,32 @@
 "strict";
 
-let divBg = document.getElementsByClassName("my-div")[0];
+//variable declared
+let photos = ["images/bike.jpg", "images/car.jpg", "images/laptop.jpeg"];
+let imgTag = document.querySelector("img");
+let count = 0;
 
-divBg.style.background = "red";
-divBg.style.color = "white";
-divBg.style.padding = "20px 30px";
+function next() {
+    count++;
+if (count >= photos.length) {
+    count = 0;
+    imgTag.src=photos[count];
 
+} else{
 
-let heading1 = document.createElement("h1");
+    imgTag.src = photos[count];
+}
 
-let text = document.createTextNode("This is the highest persont in the world!");
+}
 
-heading1.appendChild(text);
-
-divBg.appendChild(heading1);
-
-let heading_2nd = document.getElementsByTagName("h1")[1];
-
-
-
-
-let addElement = document.createElement("h1");
-let text2 = document.createTextNode("This is the most important part in my life");
-
-addElement.appendChild(text2);
-divBg.appendChild(addElement);
+function prev() {
+    count --;
+    if (count < 0) {
+       count=photos.length - 1;
+        imgTag.src=photos[count];
+    
+    } else{
+    
+        imgTag.src = photos[count];
+    }
+    
+}
