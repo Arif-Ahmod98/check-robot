@@ -1,32 +1,28 @@
-"strict";
+"use strict";
 
-let photos = ["images/bike.jpg", "images/car.jpg", "images/laptop.jpeg", "images/flower.jfif", "images/cow.jfif"];
+let heading = document.getElementById("heading_style");
 
-let imgSource = document.querySelector("img");
-let count = 0;
+function toRight() {
 
-
-
-function next() {
-    count++;
-if  ( count >= photos.length ) {
-    count = 0;
-    imgSource.src = photos[count];
-
-} else {
-    imgSource.src = photos[count];
-
-}
+    heading.classList.add("toRight");
+    heading.classList.remove("toLeft");
 }
 
-function prev() {
-    count --;
-    if  ( count < 0 ) {
-        count = photos.length - 1;
-        imgSource.src = photos[count];
-    
-    } else {
-        imgSource.src = photos[count];
-    
+function toBottom() {
+
+    heading.classList.add("toBottom");
+    heading.classList.remove("toTop");
 }
+
+function toLeft() {
+
+    heading.classList.add("toLeft");
+    heading.classList.remove("toRight");
+}
+
+function toTop() {
+
+    heading.classList.add("toTop");
+    heading.classList.remove("toBottom");
+ 
 }
