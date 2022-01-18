@@ -1,28 +1,22 @@
 "use strict";
 
-let heading = document.getElementById("heading_style");
 
-function toRight() {
 
-    heading.classList.add("toRight");
-    heading.classList.remove("toLeft");
-}
+document.getElementById("submit").addEventListener("click", function () {
+    let heading2 = document.querySelector("h2");
+    let input = document.querySelector("input").value;
+    if ( input == 10) {
+        heading2.innerHTML = "Welcome user !";
+        heading2.classList.remove("red");
+    
+    } else if (input == "") {
+        heading2.innerHTML = "Enter number";
+        heading2.classList.remove("red");
+    
 
-function toBottom() {
-
-    heading.classList.add("toBottom");
-    heading.classList.remove("toTop");
-}
-
-function toLeft() {
-
-    heading.classList.add("toLeft");
-    heading.classList.remove("toRight");
-}
-
-function toTop() {
-
-    heading.classList.add("toTop");
-    heading.classList.remove("toBottom");
- 
-}
+    }
+    else {
+    heading2.innerHTML = "Warning Robot!";
+    heading2.classList.add("red");
+    }
+});

@@ -4,41 +4,58 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Add style with javascript</title>
+    <title>Add event listener</title>
     <style>
-      #heading_style {
-        color: white;
-        background-color: red;
-        width: 250px;
+      button#submit {
+        padding: 8px 31px;
+        color: black;
+        background: linear-gradient(45deg, #15ffc9, #fe12caf7);
+        border: none;
+        font-weight: bold;
+        font-size: 16px;
+        color: black;
+        border-radius: 6px;
+        box-shadow: 1px 1px 10px #a19898;
+      }
+      .shadow {
+        box-shadow: 0px 7px 10px #ff9900;
+      }
+      input[type="number"] {
+        padding: 8px;
+        margin-top: 5px;
+      }
+      h1 {
+        margin: 0px;
+        padding: 0px;
+      }
+      h2 {
+        margin-bottom: 0px;
+        font-size: 36px;
+        color: rgb(53, 53, 241);
+      }
+      .red {
+        color: red !important;
+      }
+      .main-div {
+        width: 300px;
+        margin: 10% auto;
+        background-color: rgb(199, 199, 199);
         padding: 30px 20px;
         text-align: center;
-        font-size: 20px;
-      }
-      .fixed_div {
-        position: absolute;
-        display: block !important;
-        top: 0px;
-        margin: auto;
-        text-align: center;
-      }
-      .toRight {
-        margin-left: 50% !important;
-        transition: 0.4s !important;
-      }
-      .toBottom {
-        margin-top: 28% !important;
+        border: 5px solid #4791c6;
       }
     </style>
   </head>
   <body>
-    <h1 id="heading_style">Hello Everyone!</h1>
-    <div class="fixed_div">
-      <button type="button" onclick="toRight()">TO RIGHT</button>
-      <button type="button" onclick="toBottom()">TO BOTTOM</button>
-      <button type="button" onclick="toLeft()">TO LEFT</button>
-      <button type="button" onclick="toTop()">TO TOP</button>
-    </div>
+    <div class="main-div">
+      <h2>Hello World</h2>
 
-    <script src="custom.js"></script>
+      <p>Submit true way if you aren't a robot!</p>
+      <h1 class="stye1">7 + 3 = ?</h1>
+      <label for="name">Total : <input type="number" placeholder="Enter Number" /><br /><br /> </label>
+      <button type="submit" id="submit">Submit</button> <br /><br />
+
+      <script src="custom.js"></script>
+    </div>
   </body>
 </html>
